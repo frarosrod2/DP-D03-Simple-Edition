@@ -253,41 +253,5 @@
 		<property name="expertGoal" value="23.0€" />
 		<property name="expertReward" value="19.0€" />
 	</bean>
-	
-<!-- Default customisation -->
-  	<bean id="defaultCustomisation" class="acme.entities.customisations.Customisation">
-  		<property name="spamWords" value="sex, hard core, viagra, cialis, nigeria, you’ve won, million dollar, sexo, duro, has ganado, un millón de dólares"/>
-<!--   			<property name="spamWords"> -->
-<!--   			<list> -->
-<!-- 				<value>sex</value> -->
-<!-- 				<value>hard core</value> -->
-<!-- 				<value>viagra</value> -->
-<!-- 				<value>cialis</value> -->
-<!-- 				<value>nigeria</value> -->
-<!-- 				<value>you’ve won</value> -->
-<!-- 				<value>million dollar</value> -->
-<!-- 				<value>sexo</value> -->
-<!-- 				<value>duro</value> -->
-<!-- 				<value>has ganado</value> -->
-<!-- 				<value>un millón de dólares</value> -->
-<!-- 			</list> -->
-<!--   		</property> -->
-		<property name="spamThreshold" value="2.50"/>
-		<property name="activitySectors" value="Technology, Science, Arts, Business, Health, Tecnología, Ciencia, Artes, Negocios, Salud"/>
-<!--   			<property name="activitySectors"> -->
-<!--   			<list> -->
-<!-- 				<value>Technology</value> -->
-<!-- 				<value>Science</value> -->
-<!-- 				<value>Arts</value> -->
-<!-- 				<value>Business</value> -->
-<!-- 				<value>Health</value> -->
-<!-- 				<value>Tecnología</value> -->
-<!-- 				<value>Ciencia</value> -->
-<!-- 				<value>Artes</value> -->
-<!-- 				<value>Negocios</value> -->
-<!-- 				<value>Salud</value> -->
-<!-- 			</list> -->
-<!--   		</property> -->
-  	</bean>
 
 </beans>

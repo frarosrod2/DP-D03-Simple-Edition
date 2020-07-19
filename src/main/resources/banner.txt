@@ -17,4 +17,4 @@
                
 ${Ansi.DEFAULT}
 Powered by Spring Boot ${spring-boot.version}
-Powered by Acme-Incubator 1.0
+Powered by Acme-Incubator 2.0
