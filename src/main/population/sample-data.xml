@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+- sample-data.xml
+-
+- Copyright (c) 2019 Rafael Corchuelo.
+-
+- In keeping with the traditional purpose of furthering education and research, it is
+- the policy of the copyright owner to permit non-commercial use and redistribution of
+- this software. It has been tested carefully, but it is not guaranteed for any particular
+- purposes.  The copyright owner does not offer any warranties or representations, nor do
+- they accept any liabilities with respect to them.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="conversion-service.xml" />
+
+
+	<bean name="authenticatedUserAccount1" class="acme.framework.entities.UserAccount">
+		<property name="username" value="user1" />
+		<property name="password" value="user1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="surname" value="Test" />
+				<property name="name" value="User1" />
+				<property name="email" value="user1@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="authenticatedAuthenticated1" />
+			</list>
+		</property>
+	</bean>
+	
+
+	<bean name="authenticatedAuthenticated1" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="authenticatedUserAccount1" />
+	</bean>
+
+	<bean id="inquiry01" class="acme.entities.inquiries.Inquiry">
+		<property name="title" value="Deploy application" />
+		<property name="creation" value="2020/07/07 12:55" />
+		<property name="deadline" value="2020/12/06 23:59" />
+		<property name="description" value="Deploy the aplication Acme-Jobs in cloud" />
+		<property name="minMoney" value="10.00€" />
+		<property name="maxMoney" value="100.00€" />
+		<property name="email" value="example@hotmail.com" />
+	</bean>
+	
+	<bean id="inquiry02" class="acme.entities.inquiries.Inquiry">
+		<property name="title" value="Test deploy" />
+		<property name="creation" value="2020/07/07 12:55" />
+		<property name="deadline" value="2020/12/06 23:59" />
+		<property name="description" value="Test the deploy in cloud" />
+		<property name="minMoney" value="150.00€" />
+		<property name="maxMoney" value="250.00€" />
+		<property name="email" value="testdeploy@hotmail.com" />
+	</bean>
+	
+	<bean id="inquiry03" class="acme.entities.inquiries.Inquiry">
+		<property name="title" value="Test application" />
+		<property name="creation" value="2020/07/07 12:55" />
+		<property name="deadline" value="2020/12/06 23:59" />
+		<property name="description" value="Test the aplication Acme-Incubator in cloud" />
+		<property name="minMoney" value="5.00€" />
+		<property name="maxMoney" value="25.00€" />
+		<property name="email" value="testapplication@hotmail.com" />
+	</bean>
+
+	<bean id="technologyRecord01" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Technology Record 1" />
+		<property name="activitySector" value="Technology" />
+		<property name="inventor" value="Google" />
+		<property name="description" value="First Technology Record Test" />
+		<property name="website" value="https://www.google.com" />
+		<property name="email" value="google@gmail.com" />
+		<property name="openSource" value="true" />
+		<property name="stars" value="4" />
+	</bean>
+	
+	<bean id="technologyRecord02" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Technology Record 2" />
+		<property name="activitySector" value="Science" />
+		<property name="inventor" value="NASA" />
+		<property name="description" value="Nasa Technology Record" />
+		<property name="website" value="https://www.nasa.com" />
+		<property name="email" value="nasa@gmail.com" />
+		<property name="openSource" value="false" />
+		<property name="stars" value="3" />
+	</bean>
+	
+	<bean id="technologyRecord03" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Technology Record 3" />
+		<property name="activitySector" value="Technology" />
+		<property name="inventor" value="Apple" />
+		<property name="description" value="Apple Technology Record" />
+		<property name="website" value="https://www.apple.com" />
+		<property name="email" value="apple@gmail.com" />
+		<property name="openSource" value="false" />
+		<property name="stars" value="2" />
+	</bean>
+	
+	<bean id="technologyRecord04" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Technology Record 4" />
+		<property name="activitySector" value="Automobile" />
+		<property name="inventor" value="Tesla Motors" />
+		<property name="description" value="Tesla Motors Technology Record" />
+		<property name="website" value="https://www.tesla.com" />
+		<property name="email" value="tesla@gmail.com" />
+		<property name="openSource" value="true" />
+		<property name="stars" value="5" />
+	</bean>
+	
+	<bean id="technologyRecord05" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Technology Record 5" />
+		<property name="activitySector" value="Science" />
+		<property name="inventor" value="SpaceX" />
+		<property name="description" value="SpaceX Technology Record"/>
+		<property name="website" value="https://www.spacex.com" />
+		<property name="email" value="spacex@gmail.com" />
+		<property name="openSource" value="true" />
+		<property name="stars" value="4" />
+	</bean>
+	
+	<bean id="toolRecord01" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Tool Record 1" />
+		<property name="activitySector" value="Technology" />
+		<property name="inventor" value="Microsoft" />
+		<property name="description" value="First Tool Record Test" />
+		<property name="website" value="https://www.microsoft.com" />
+		<property name="email" value="microsoft@hotmail.com" />
+		<property name="openSource" value="true" />
+		<property name="stars" value="4" />
+	</bean>
+	
+	<bean id="toolRecord02" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Tool Record 2" />
+		<property name="activitySector" value="Science" />
+		<property name="inventor" value="Sony" />
+		<property name="description" value="Second Tool Record Test" />
+		<property name="website" value="https://www.sony.com" />
+		<property name="email" value="sony@hotmail.com" />
+		<property name="openSource" value="true" />
+		<property name="stars" value="5" />
+	</bean>
+	
+	<bean id="toolRecord03" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Tool Record 3" />
+		<property name="activitySector" value="Technology" />
+		<property name="inventor" value="Paypal" />
+		<property name="description" value="Paypal Tool Record" />
+		<property name="website" value="https://www.paypal.com" />
+		<property name="email" value="paypal@hotmail.com" />
+		<property name="openSource" value="true" />
+		<property name="stars" value="5" />
+	</bean>
+	
+	<bean id="toolRecord04" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Tool Record 4" />
+		<property name="activitySector" value="Science" />
+		<property name="inventor" value="AAAS" />
+		<property name="description" value="American Association for the Advancement of Science Tool Record" />
+		<property name="website" value="https://www.aaas.com" />
+		<property name="email" value="aaas@hotmail.com" />
+		<property name="openSource" value="false" />
+		<property name="stars" value="2" />
+	</bean>
+	
+	<bean id="toolRecord05" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Tool Record 5" />
+		<property name="activitySector" value="Programming" />
+		<property name="inventor" value="Liquid technologies" />
+		<property name="description" value="Liquid technologies Tool Record" />
+		<property name="website" value="https://www.liquid.com" />
+		<property name="email" value="liquid@hotmail.com" />
+		<property name="openSource" value="false" />
+		<property name="stars" value="3" />
+	</bean>
+	
+	<bean id="overture01" class="acme.entities.overtures.Overture">
+		<property name="title" value="Acme Overture" />
+		<property name="creation" value="2020/07/07 12:55" />
+		<property name="deadline" value="2020/12/10 23:59" />
+		<property name="description" value="Description of the acme overture" />
+		<property name="minMoney" value="eur 123.34"/>
+		<property name="maxMoney" value="eur 431.53"/>
+		<property name="email" value="acmeoverture@hotmail.com" />
+	</bean>
+	
+	<bean id="overture02" class="acme.entities.overtures.Overture">
+		<property name="title" value="Test Overture" />
+		<property name="creation" value="2020/07/09 12:55" />
+		<property name="deadline" value="2020/12/16 23:59" />
+		<property name="description" value="Description of the test overture" />
+		<property name="minMoney" value="eur 143.82"/>
+		<property name="maxMoney" value="eur 324.22"/>
+		<property name="email" value="testoverture@hotmail.com" />
+	</bean>
+	
+	<bean id="overture03" class="acme.entities.overtures.Overture">
+		<property name="title" value="Last Overture" />
+		<property name="creation" value="2020/07/08 12:55" />
+		<property name="deadline" value="2020/12/12 23:59" />
+		<property name="description" value="Description of the last overture" />
+		<property name="minMoney" value="eur 443.82"/>
+		<property name="maxMoney" value="eur 924.52"/>
+		<property name="email" value="lastoverture@hotmail.com" />
+	</bean>
+	
+	
+	<bean id="notice01" class="acme.entities.notices.Notice">
+		<property name="picture" value="https://i.imgur.com/KXmPAuz.jpg" />
+		<property name="title" value="Nuevos contagios" />
+		<property name="creation" value="2020/07/07 12:55" />
+		<property name="deadline" value="2020/12/10 23:59" />
+		<property name="body" value="Aumentan los contagios de covid-19 en Murcia." />
+		<property name="optionalLinks" value="https://www.ev.us.es, https://www.google.es" />
+	</bean>
+	
+	<bean id="notice02" class="acme.entities.notices.Notice">
+		<property name="picture" value="https://i.blogs.es/0b8b8b/dribbble_acme_800_logo/1366_2000.jpg" />
+		<property name="title" value="Subida de acciones de grupo Acme" />
+		<property name="creation" value="2020/07/10 12:55" />
+		<property name="deadline" value="2020/12/11 23:59" />
+		<property name="body" value="El grupo Acme ha obtenido una subida del valor de sus acciones en un porcentaje del 50%" />
+		<property name="optionalLinks" value="" />
+	</bean>
+	
+	<bean id="challenge01" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Desafío 1" />
+		<property name="deadline" value="2020/12/11 23:59" />
+		<property name="description" value="Desafío muy duro" />
+		<property name="rookieGoal" value="10.0€" />
+		<property name="rookieReward" value="10.0€" />
+		<property name="averageGoal" value="15.0€" />
+		<property name="averageReward" value="10.0€" />
+		<property name="expertGoal" value="20.0€" />
+		<property name="expertReward" value="19.0€" />
+	</bean>
+	
+	<bean id="challenge02" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Desafío 12" />
+		<property name="deadline" value="2020/12/11 23:59" />
+		<property name="description" value="Desafío simple" />
+		<property name="rookieGoal" value="12.0€" />
+		<property name="rookieReward" value="10.0€" />
+		<property name="averageGoal" value="13.0€" />
+		<property name="averageReward" value="13.0€" />
+		<property name="expertGoal" value="23.0€" />
+		<property name="expertReward" value="19.0€" />
+	</bean>
+	
+<!-- Default customisation -->
+  	<bean id="defaultCustomisation" class="acme.entities.customisations.Customisation">
+  		<property name="spamWords" value="sex, hard core, viagra, cialis, nigeria, you’ve won, million dollar, sexo, duro, has ganado, un millón de dólares"/>
+<!--   			<property name="spamWords"> -->
+<!--   			<list> -->
+<!-- 				<value>sex</value> -->
+<!-- 				<value>hard core</value> -->
+<!-- 				<value>viagra</value> -->
+<!-- 				<value>cialis</value> -->
+<!-- 				<value>nigeria</value> -->
+<!-- 				<value>you’ve won</value> -->
+<!-- 				<value>million dollar</value> -->
+<!-- 				<value>sexo</value> -->
+<!-- 				<value>duro</value> -->
+<!-- 				<value>has ganado</value> -->
+<!-- 				<value>un millón de dólares</value> -->
+<!-- 			</list> -->
+<!--   		</property> -->
+		<property name="spamThreshold" value="2.50"/>
+		<property name="activitySectors" value="Technology, Science, Arts, Business, Health, Tecnología, Ciencia, Artes, Negocios, Salud"/>
+<!--   			<property name="activitySectors"> -->
+<!--   			<list> -->
+<!-- 				<value>Technology</value> -->
+<!-- 				<value>Science</value> -->
+<!-- 				<value>Arts</value> -->
+<!-- 				<value>Business</value> -->
+<!-- 				<value>Health</value> -->
+<!-- 				<value>Tecnología</value> -->
+<!-- 				<value>Ciencia</value> -->
+<!-- 				<value>Artes</value> -->
+<!-- 				<value>Negocios</value> -->
+<!-- 				<value>Salud</value> -->
+<!-- 			</list> -->
+<!--   		</property> -->
+  	</bean>
+
+</beans>

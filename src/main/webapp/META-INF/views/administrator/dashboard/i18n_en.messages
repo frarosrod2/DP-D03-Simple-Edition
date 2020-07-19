@@ -1,0 +1,29 @@
+administrator.dashboard.form.label.quantities = Quantities
+administrator.dashboard.form.label.numberOfNotices = Number of notices
+administrator.dashboard.form.label.numberOfTechnologyRecords = Number of technology records
+administrator.dashboard.form.label.numberOfToolRecords = Number of tool records
+	
+administrator.dashboard.form.label.inquiries = Inquiries
+administrator.dashboard.form.label.minimumMoneyActiveInquiries = Minimum
+administrator.dashboard.form.label.maximumMoneyActiveInquiries = Maximum
+administrator.dashboard.form.label.averageMoneyActiveInquiries = Average
+administrator.dashboard.form.label.standardDeviationMoneyActiveInquiries = Standard deviation
+
+administrator.dashboard.form.label.overtures = Overtures
+administrator.dashboard.form.label.minimumMoneyActiveOvertures = Minimum
+administrator.dashboard.form.label.maximumMoneyActiveOvertures = Maximum
+administrator.dashboard.form.label.averageMoneyActiveOvertures = Average
+administrator.dashboard.form.label.standardDeviationMoneyActiveOvertures = Standard deviation
+
+administrator.dashboard.chart.label.technologyRecords = Technology Records
+administrator.dashboard.chart.label.toolRecords = Tool Records
+administrator.dashboard.chart.label.open = Open Source
+administrator.dashboard.chart.label.closed = Closed Source
+administrator.dashboard.chart.label.technologyRecordsBySectors = Technology Records
+administrator.dashboard.chart.label.toolRecordsBySectors = Tool Records
+administrator.dashboard.chart.label.technologyRecordsSectors = Technology Records By Sectors
+administrator.dashboard.chart.label.toolRecordsSectors = Tool Records By Sectors
+
+
+administrator.dashboard.chart.label.ratioOpenVsClosedTechnologies = Ratio Of Open Vs Closed Technologies
+administrator.dashboard.chart.label.ratioOpenVsClosedTools = Ratio Of Open Vs Closed Tools

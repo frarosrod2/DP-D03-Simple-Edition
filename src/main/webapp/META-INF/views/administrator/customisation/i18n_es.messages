@@ -1,0 +1,6 @@
+administrator.customisation.form.label.spamWords = Palabras spam
+administrator.customisation.form.label.spamThreshold = Limite spam
+administrator.customisation.form.label.activitySectors = Sectores de actividad
+administrator.customisation.form.button.return = Volver
+administrator.customisation.form.button.update = Actualizar
+administrator.customisation.form.button.edit = Editar
