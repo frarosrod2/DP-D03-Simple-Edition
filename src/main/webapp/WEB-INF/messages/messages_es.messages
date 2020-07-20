@@ -18,6 +18,13 @@ default.placeholder.double = 123.456,78
 default.placeholder.integer = 123.456
 default.placeholder.url = http://www.acme.com
 
+default.placeholder.creditcard.holderName = Nombre del titular
+default.placeholder.creditcard.brand = Marca
+default.placeholder.creditcard.number = Número
+default.placeholder.creditcard.cvv = CVV
+default.placeholder.creditcard.expMonth = Mes expiración
+default.placeholder.creditcard.expYear = Año expiración
+
 default.error.conversion = Valor incorrecto
 default.error.endpoint-unavailable = End-point no disponible
 default.error.not-authorised = Acceso no autorizado

@@ -10,7 +10,7 @@
 
 # master.banner.welcome #######################################################
 
-master.banner.background = #FFE97F 
+master.banner.background = images/banner.png 
 
 ﻿# master.welcome ##############################################################
 
@@ -41,6 +41,8 @@ master.menu.administrator.customisations.display = Mostrar personalización
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.notice.list = Lista de noticias
+master.menu.administrator.listBanners = Listar banners
+master.menu.administrator.createBanners = Crear banner
 
 
 # master.menu.provider ########################################################
