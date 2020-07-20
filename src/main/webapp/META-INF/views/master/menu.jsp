@@ -59,6 +59,9 @@
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show" />
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.notice.list" action="/administrator/notice/list"/>
+			<acme:menu-separator/>			
+			<acme:menu-suboption code="master.menu.administrator.createBanners" action="/administrator/banner/create"/>
+			<acme:menu-suboption code="master.menu.administrator.listBanners" action="/administrator/banner/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
