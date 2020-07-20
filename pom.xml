@@ -19,7 +19,7 @@
 
 	<groupId>acme</groupId>
 	<artifactId>acme-incubator</artifactId>
-	<version>2.0</version>
+	<version>3.0</version>
 	<packaging>war</packaging>
 
 	<name>Acme-Incubator</name>
