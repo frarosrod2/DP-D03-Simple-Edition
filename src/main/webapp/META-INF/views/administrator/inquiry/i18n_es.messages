@@ -1,0 +1,13 @@
+administrator.inquiry.form.label.title = Título 
+administrator.inquiry.form.label.creation = Creacion
+administrator.inquiry.form.label.deadline = Fecha límite
+administrator.inquiry.form.label.description = Descripción
+administrator.inquiry.form.label.range = Rango
+administrator.inquiry.form.label.email = Email
+
+administrator.inquiry.list.label.title = Título
+administrator.inquiry.list.label.deadline = Fecha límite
+administrator.inquiry.list.label.range = Rango
+
+
+administrator.inquiry.form.button.return = Return
