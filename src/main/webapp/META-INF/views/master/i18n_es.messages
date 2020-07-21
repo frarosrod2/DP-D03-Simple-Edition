@@ -47,6 +47,12 @@ master.menu.administrator.listInquiries = Listar peticiones
 master.menu.administrator.createInquiries = Crear petición
 master.menu.administrator.listOvertures = Listar propuestas
 master.menu.administrator.createOvertures = Crear propuesta
+master.menu.administrator.createChallenges = Crear desafíos
+master.menu.administrator.listChallenges = Lista de desafíos
+master.menu.administrator.createTechnologyRecords = Crear registros tecnológicos
+master.menu.administrator.listTechnologyRecords = Lista de registros tecnológicos
+master.menu.administrator.createToolRecords = Crear registros de herramientas
+master.menu.administrator.listToolRecords = Lista de registros de herramientas
 
 # master.menu.provider ########################################################
 

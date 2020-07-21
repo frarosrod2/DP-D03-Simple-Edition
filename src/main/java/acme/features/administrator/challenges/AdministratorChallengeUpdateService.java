@@ -1,0 +1,113 @@
+
+package acme.features.administrator.challenges;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import acme.entities.challenges.Challenge;
+import acme.framework.components.Errors;
+import acme.framework.components.Model;
+import acme.framework.components.Request;
+import acme.framework.entities.Administrator;
+import acme.framework.services.AbstractUpdateService;
+
+@Service
+public class AdministratorChallengeUpdateService implements AbstractUpdateService<Administrator, Challenge> {
+
+	@Autowired
+	AdministratorChallengeRepository repository;
+
+
+	@Override
+	public boolean authorise(final Request<Challenge> request) {
+		assert request != null;
+		return true;
+	}
+
+	@Override
+	public void bind(final Request<Challenge> request, final Challenge entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+
+		request.bind(entity, errors);
+
+	}
+
+	@Override
+	public void unbind(final Request<Challenge> request, final Challenge entity, final Model model) {
+		assert request != null;
+		assert entity != null;
+		assert model != null;
+
+		request.unbind(entity, model, "title", "deadline", "description", "rookieGoal", "rookieReward", "averageGoal", "averageReward", "expertGoal", "expertReward");
+	}
+
+	@Override
+	public Challenge findOne(final Request<Challenge> request) {
+		assert request != null;
+
+		Challenge result;
+		int id;
+
+		id = request.getModel().getInteger("id");
+		result = this.repository.findChallengeById(id);
+
+		return result;
+	}
+
+	@Override
+	public void validate(final Request<Challenge> request, final Challenge entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+
+		Boolean currencyOk, amountOk;
+		Calendar calendar;
+		java.util.Date minimumDeadline;
+
+		if (!errors.hasErrors("deadline")) {
+			calendar = new GregorianCalendar();
+			calendar.add(Calendar.DAY_OF_MONTH, 7);
+			minimumDeadline = calendar.getTime();
+			errors.state(request, entity.getDeadline().after(minimumDeadline), "deadline", "administrator.Challenge.error.deadlineFuture");
+		}
+
+		if (!errors.hasErrors("rookieReward")) {
+			currencyOk = entity.getRookieReward().getCurrency().equals("EUR");
+			errors.state(request, currencyOk, "rookieReward", "administrator.challenge.error.currencyNotEUR");
+
+			amountOk = entity.getRookieReward().getAmount() > 0;
+			errors.state(request, amountOk, "rookieReward", "administrator.challenge.error.amount");
+		}
+
+		if (!errors.hasErrors("averageReward")) {
+			currencyOk = entity.getAverageReward().getCurrency().equals("EUR");
+			errors.state(request, currencyOk, "averageReward", "administrator.challenge.error.currencyNotEUR");
+
+			amountOk = entity.getAverageReward().getAmount() > 0;
+			errors.state(request, amountOk, "averageReward", "administrator.challenge.error.amount");
+		}
+		if (!errors.hasErrors("expertReward")) {
+			currencyOk = entity.getExpertReward().getCurrency().equals("EUR");
+			errors.state(request, currencyOk, "expertReward", "administrator.challenge.error.currencyNotEUR");
+
+			amountOk = entity.getExpertReward().getAmount() > 0;
+			errors.state(request, amountOk, "expertReward", "administrator.challenge.error.amount");
+		}
+
+	}
+
+	@Override
+	public void update(final Request<Challenge> request, final Challenge entity) {
+		assert request != null;
+		assert entity != null;
+
+		this.repository.save(entity);
+
+	}
+
+}

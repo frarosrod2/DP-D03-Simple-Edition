@@ -47,6 +47,12 @@ master.menu.administrator.listInquiries = List inquiries
 master.menu.administrator.createInquiries = Create inquiry
 master.menu.administrator.listOvertures = List overtures
 master.menu.administrator.createOvertures = Create overture
+master.menu.administrator.createChallenges = Create challenges
+master.menu.administrator.listChallenges = List challenges
+master.menu.administrator.createTechnologyRecords = Create technology records
+master.menu.administrator.listTechnologyRecords = List technology records
+master.menu.administrator.createToolRecords = Create tool records
+master.menu.administrator.listToolRecords = List tool records
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider

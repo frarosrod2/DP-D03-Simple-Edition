@@ -463,3 +463,18 @@ Consider defining a bean of type 'acme.features.administrator.overtures.Administ
 ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
 ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
 ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-incubator].[jsp]] at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:407): File [&#47;META-INF&#47;views&#47;administrator&#47;technology-record&#47;form.jsp] not found
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-incubator].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../administrator/technology-record/form.jsp'.
+at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:407): File [&#47;META-INF&#47;views&#47;administrator&#47;technology-record&#47;form.jsp] not found
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-incubator].[dispatcherServlet]] at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:407): File [&#47;META-INF&#47;views&#47;administrator&#47;technology-record&#47;form.jsp] not found
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-incubator].[jsp]] at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:407): File [&#47;META-INF&#47;views&#47;administrator&#47;technology-record&#47;form.jsp] not found
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-incubator].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../administrator/technology-record/form.jsp'.
+at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:407): File [&#47;META-INF&#47;views&#47;administrator&#47;technology-record&#47;form.jsp] not found
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-incubator].[dispatcherServlet]] at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:407): File [&#47;META-INF&#47;views&#47;administrator&#47;technology-record&#47;form.jsp] not found
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-incubator].[jsp]] at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:407): File [&#47;META-INF&#47;views&#47;administrator&#47;technology-record&#47;list.jsp] not found
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-incubator].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../administrator/technology-record/list.jsp'.
+at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:407): File [&#47;META-INF&#47;views&#47;administrator&#47;technology-record&#47;list.jsp] not found
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-incubator].[dispatcherServlet]] at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:407): File [&#47;META-INF&#47;views&#47;administrator&#47;technology-record&#47;list.jsp] not found
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
