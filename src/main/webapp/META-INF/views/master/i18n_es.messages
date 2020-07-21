@@ -43,7 +43,10 @@ master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.notice.list = Lista de noticias
 master.menu.administrator.listBanners = Listar banners
 master.menu.administrator.createBanners = Crear banner
-
+master.menu.administrator.listInquiries = Listar peticiones
+master.menu.administrator.createInquiries = Crear petición
+master.menu.administrator.listOvertures = Listar propuestas
+master.menu.administrator.createOvertures = Crear propuesta
 
 # master.menu.provider ########################################################
 

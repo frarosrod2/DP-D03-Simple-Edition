@@ -17,31 +17,28 @@ import acme.framework.entities.Administrator;
 public class AdministratorInquiryController extends AbstractController<Administrator, Inquiry> {
 
 	@Autowired
-	private AdministratorInquiryListService			listService;
+	private AdministratorInquiryListService		listService;
 
 	@Autowired
-	private AdministratorInquiryShowService			showService;
+	private AdministratorInquiryShowService		showService;
 
-	/*
-	
 	@Autowired
-	private AdministratorInquiryCreateService 		createService;
-	
-	@Autowired
-	private AdministratorInquiryUpdateService		updateService;
-	
-	@Autowired
-	private AdministratorInquiryDeleteService		deleteService;
+	private AdministratorInquiryCreateService	createService;
 
-	*/
+	@Autowired
+	private AdministratorInquiryUpdateService	updateService;
+
+	@Autowired
+	private AdministratorInquiryDeleteService	deleteService;
+
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-//		super.addBasicCommand(BasicCommand.CREATE, this.createService);
-//		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
-//		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 
 }

@@ -5,10 +5,10 @@
 
 <acme:form>
 	<acme:form-textbox code="administrator.inquiry.form.label.title" path="title"/>
-	<acme:form-textbox code="administrator.inquiry.form.label.creation" path="creation"/>
 	<acme:form-textbox code="administrator.inquiry.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="administrator.inquiry.form.label.description" path="description"/>
-	<acme:form-textbox code="administrator.inquiry.form.label.range" path="range"/>
+	<acme:form-textbox code="administrator.inquiry.form.label.minMoney" path="minMoney"/>
+	<acme:form-textbox code="administrator.inquiry.form.label.maxMoney" path="maxMoney"/>
 	<acme:form-textbox code="administrator.inquiry.form.label.email" path="email"/>
 
 	<acme:form-submit test="${command=='show'}"

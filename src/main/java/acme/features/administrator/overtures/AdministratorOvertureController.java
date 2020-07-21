@@ -13,31 +13,32 @@ import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Administrator;
 
 @Controller
-@RequestMapping("/administrador/overture/")
+@RequestMapping("/administrator/overture/")
 public class AdministratorOvertureController extends AbstractController<Administrator, Overture> {
 
 	@Autowired
-	private AdministratorOvertureListService			listService;
+	private AdministratorOvertureListService	listService;
 
 	@Autowired
-	private AdministratorOvertureShowService			showService;
-	/*
+	private AdministratorOvertureShowService	showService;
+
 	@Autowired
-	private AdministratorOvertureCreateService createService;
-	
+	private AdministratorOvertureCreateService	createService;
+
 	@Autowired
-	private AdministratorOvertureUpdateService updateService;
-	
+	private AdministratorOvertureUpdateService	updateService;
+
 	@Autowired
-	private AdministratorOvertureDeleteService deleteService;
-	*/
+	private AdministratorOvertureDeleteService	deleteService;
+
+
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-//		super.addBasicCommand(BasicCommand.CREATE, this.createService);
-//		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
-//		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 
 }

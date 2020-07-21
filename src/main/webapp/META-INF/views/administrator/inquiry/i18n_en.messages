@@ -1,8 +1,8 @@
 administrator.inquiry.form.label.title = Title 
-administrator.inquiry.form.label.creation = Creation
 administrator.inquiry.form.label.deadline = Deadline
 administrator.inquiry.form.label.description = Description
-administrator.inquiry.form.label.range = Range
+administrator.inquiry.form.label.minMoney = Minimun range money
+administrator.inquiry.form.label.maxMoney = Maximum range money
 administrator.inquiry.form.label.email = Email
 
 administrator.inquiry.list.label.title = Title
@@ -11,3 +11,10 @@ administrator.inquiry.list.label.range = Range
 
 
 administrator.inquiry.form.button.return = Return
+administrator.inquiry.form.button.create = Create
+administrator.inquiry.form.button.update = Update
+administrator.inquiry.form.button.delete = Delete
+
+administrator.inquiry.error.deadlineFuture = Deadline must be future
+administrator.inquiry.form.error.onlyEuro = Currency must be euro
+administrator.inquiry.form.error.maxAndMinError = Max money must be higher than min
