@@ -25,5 +25,5 @@ administrator.dashboard.chart.label.technologyRecordsSectors = Registros Tecnol�
 administrator.dashboard.chart.label.toolRecordsSectors = Archivos Tecnológicos por Sectores
 
 
-administrator.dashboard.chart.label.ratioOpenVsClosedTechnologies = Ratio Of Open Vs Closed Technologies
-administrator.dashboard.chart.label.ratioOpenVsClosedTools = Ratio Of Open Vs Closed Tools
+administrator.dashboard.chart.label.ratioOpenVsClosedTechnologies = Proporción de tecnologías abiertas y cerradas
+administrator.dashboard.chart.label.ratioOpenVsClosedTools = Proporción de herramientas abiertas y cerradas

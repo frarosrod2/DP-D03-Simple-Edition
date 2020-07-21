@@ -20,7 +20,7 @@ public class AuthenticatedInquiryController extends AbstractController<Authentic
 	private AuthenticatedInquiryListService	listService;
 
 	@Autowired
-	AuthenticatedInquiryShowService			showService;
+	private AuthenticatedInquiryShowService			showService;
 
 
 	@PostConstruct

@@ -21,7 +21,7 @@ public class AuthenticatedOvertureController extends AbstractController<Authenti
 	private AuthenticatedOvertureListService	listService;
 
 	@Autowired
-	AuthenticatedOvertureShowService			showService;
+	private AuthenticatedOvertureShowService			showService;
 
 
 	@PostConstruct

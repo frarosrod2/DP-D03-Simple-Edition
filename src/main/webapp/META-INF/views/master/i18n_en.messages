@@ -43,7 +43,10 @@ master.menu.administrator.shutdown = Shut down
 master.menu.administrator.notice.list = List of Notices
 master.menu.administrator.listBanners = List banners
 master.menu.administrator.createBanners = Create banner
-
+master.menu.administrator.listInquiries = List inquiries
+master.menu.administrator.createInquiries = Create inquiry
+master.menu.administrator.listOvertures = List overtures
+master.menu.administrator.createOvertures = Create overture
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider

@@ -63,6 +63,12 @@
 			<acme:menu-suboption code="master.menu.administrator.createBanners" action="/administrator/banner/create"/>
 			<acme:menu-suboption code="master.menu.administrator.listBanners" action="/administrator/banner/list"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.createInquiries" action="/administrator/inquiry/create"/>
+			<acme:menu-suboption code="master.menu.administrator.listInquiries" action="/administrator/inquiry/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.createOvertures" action="/administrator/overture/create"/>
+			<acme:menu-suboption code="master.menu.administrator.listOvertures" action="/administrator/overture/list"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
 				
