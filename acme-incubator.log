@@ -478,3 +478,35 @@ ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-incuba
 ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
 ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
 ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorNoticeController': Unsatisfied dependency expressed through field 'createService'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'acme.framework.services.AbstractService<acme.framework.entities.Administrator, acme.entities.notices.Notice>' available: expected single matching bean but found 2: administratorNoticeListService,administratorNoticeShowService
+ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] ***************************
+APPLICATION FAILED TO START
+***************************
+Description:
+Field createService in acme.features.administrator.notices.AdministratorNoticeController required a single bean, but 2 were found:
+- administratorNoticeListService: defined in file [C:\Users\muril\git\DP-D03-Simple-Edition\target\classes\acme\features\administrator\notices\AdministratorNoticeListService.class]
+- administratorNoticeShowService: defined in file [C:\Users\muril\git\DP-D03-Simple-Edition\target\classes\acme\features\administrator\notices\AdministratorNoticeShowService.class]
+Action:
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorNoticeController': Unsatisfied dependency expressed through field 'createService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'acme.features.administrator.notices.AdministratorNoticeCreateService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] ***************************
+APPLICATION FAILED TO START
+***************************
+Description:
+Field createService in acme.features.administrator.notices.AdministratorNoticeController required a bean of type 'acme.features.administrator.notices.AdministratorNoticeCreateService' that could not be found.
+The injection point has the following annotations:
+- @org.springframework.beans.factory.annotation.Autowired(required=true)
+Action:
+Consider defining a bean of type 'acme.features.administrator.notices.AdministratorNoticeCreateService' in your configuration.
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:703): Invalid property 'linkList' of bean class [acme.entities.notices.Notice]: Getter for property 'linkList' threw exception; nested exception is java.lang.reflect.InvocationTargetException
+java.lang.reflect.InvocationTargetExceptionjava.lang.NullPointerException
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:703): Invalid property 'linkList' of bean class [acme.entities.notices.Notice]: Getter for property 'linkList' threw exception; nested exception is java.lang.reflect.InvocationTargetException
+java.lang.reflect.InvocationTargetExceptionjava.lang.NullPointerException
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubator/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:703): Invalid property 'linkList' of bean class [acme.entities.notices.Notice]: Getter for property 'linkList' threw exception; nested exception is java.lang.reflect.InvocationTargetException
+java.lang.reflect.InvocationTargetExceptionjava.lang.NullPointerException
