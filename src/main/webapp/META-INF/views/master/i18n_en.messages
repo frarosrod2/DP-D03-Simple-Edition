@@ -40,13 +40,20 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.customisations.display = Display customisation 
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.shutdown = Shut down
-master.menu.administrator.notice.list = List of Notices
+master.menu.administrator.notice.create = Create notice
+master.menu.administrator.notice.list = List of notices
 master.menu.administrator.listBanners = List banners
 master.menu.administrator.createBanners = Create banner
 master.menu.administrator.listInquiries = List inquiries
 master.menu.administrator.createInquiries = Create inquiry
 master.menu.administrator.listOvertures = List overtures
 master.menu.administrator.createOvertures = Create overture
+master.menu.administrator.createChallenges = Create challenges
+master.menu.administrator.listChallenges = List challenges
+master.menu.administrator.createTechnologyRecords = Create technology records
+master.menu.administrator.listTechnologyRecords = List technology records
+master.menu.administrator.createToolRecords = Create tool records
+master.menu.administrator.listToolRecords = List tool records
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider

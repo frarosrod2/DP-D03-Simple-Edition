@@ -58,6 +58,7 @@
 			<acme:menu-suboption code="master.menu.administrator.customisations.display" action="/administrator/customisation/display"/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show" />
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.notice.create" action="/administrator/notice/create"/>
 			<acme:menu-suboption code="master.menu.administrator.notice.list" action="/administrator/notice/list"/>
 			<acme:menu-separator/>			
 			<acme:menu-suboption code="master.menu.administrator.createBanners" action="/administrator/banner/create"/>
@@ -68,6 +69,15 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.createOvertures" action="/administrator/overture/create"/>
 			<acme:menu-suboption code="master.menu.administrator.listOvertures" action="/administrator/overture/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.createChallenges" action="/administrator/challenge/create"/>
+			<acme:menu-suboption code="master.menu.administrator.listChallenges" action="/administrator/challenge/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.createTechnologyRecords" action="/administrator/technology-record/create"/>
+			<acme:menu-suboption code="master.menu.administrator.listTechnologyRecords" action="/administrator/technology-record/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.createToolRecords" action="/administrator/tool-record/create"/>
+			<acme:menu-suboption code="master.menu.administrator.listToolRecords" action="/administrator/tool-record/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
