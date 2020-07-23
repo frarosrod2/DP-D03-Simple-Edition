@@ -38,6 +38,12 @@ div.dropdown-menu {
 	background-color: #343a40 !important;
 }
 
+.scrollable-menu {
+    height: auto;
+    max-height: 300px;
+    overflow-x: hidden;
+}
+
 a.dropdown-item {
 	color: #fff !important;
 }

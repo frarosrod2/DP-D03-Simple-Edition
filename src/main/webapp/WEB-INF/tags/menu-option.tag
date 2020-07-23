@@ -39,7 +39,7 @@
 				<a href="javascript: clearReturnUrl(); redirect('${action}')" class="nav-link dropdown-toggle" data-toggle="dropdown">
 					<acme:message code="${code}"/> 
 				</a>
-				<div class="dropdown-menu ${__acme_menu_alignment}">
+				<div class="dropdown-menu scrollable-menu ${__acme_menu_alignment}">
 					${body}
 				</div>
 			</li>
