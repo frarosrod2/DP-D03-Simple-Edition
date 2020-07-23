@@ -93,6 +93,29 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 			errors.state(request, amountOk, "expertReward", "administrator.challenge.error.amount");
 		}
 
+		if (!errors.hasErrors("rookieGoal")) {
+			currencyOk = entity.getRookieGoal().getCurrency().equals("EUR") || entity.getRookieGoal().getCurrency().equals("€");
+			errors.state(request, currencyOk, "rookieGoal", "administrator.challenge.error.currencyNotEUR");
+
+			amountOk = entity.getRookieGoal().getAmount() > 0;
+			errors.state(request, amountOk, "rookieGoal", "administrator.challenge.error.amount");
+		}
+
+		if (!errors.hasErrors("averageGoal")) {
+			currencyOk = entity.getAverageGoal().getCurrency().equals("EUR") || entity.getAverageGoal().getCurrency().equals("€");
+			errors.state(request, currencyOk, "averageGoal", "administrator.challenge.error.currencyNotEUR");
+
+			amountOk = entity.getAverageGoal().getAmount() > 0;
+			errors.state(request, amountOk, "averageGoal", "administrator.challenge.error.amount");
+		}
+		if (!errors.hasErrors("expertGoal")) {
+			currencyOk = entity.getExpertGoal().getCurrency().equals("EUR") || entity.getExpertGoal().getCurrency().equals("€");
+			errors.state(request, currencyOk, "expertGoal", "administrator.challenge.error.currencyNotEUR");
+
+			amountOk = entity.getExpertGoal().getAmount() > 0;
+			errors.state(request, amountOk, "expertGoal", "administrator.challenge.error.amount");
+		}
+
 	}
 
 	@Override

@@ -11,5 +11,5 @@ administrator.banner.list.label.picture = Picture
 administrator.banner.list.label.slogan = Slogan
 administrator.banner.list.label.targetURL = URL
 
-administrator.banner.error.past-year = The year is in the past
-administrator.banner.error.past-month = The month is in the past
+administrator.banner.error.past-year = The year is in past
+administrator.banner.error.past-month = The month is in past

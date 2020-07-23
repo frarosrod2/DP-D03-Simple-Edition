@@ -204,7 +204,6 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
-create index IDX9u3lu85o98y0tro95qasghg8e on `inquiry` (`deadline`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);

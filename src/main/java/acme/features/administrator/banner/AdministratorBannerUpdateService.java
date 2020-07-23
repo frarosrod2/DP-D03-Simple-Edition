@@ -94,10 +94,10 @@ public class AdministratorBannerUpdateService implements AbstractUpdateService<A
 						test.set(2000 + entity.getCreditCard().getExpYear(), entity.getCreditCard().getExpMonth(), 1);
 						check = test.getTime();
 						boolean isExpiredMonth = check.after(present);
-						errors.state(request, isExpiredMonth, "creditCard.expMonth", "administrator.commercialBanner.error.past-month");
+						errors.state(request, isExpiredMonth, "creditCard.expMonth", "administrator.banner.error.past-month");
 					}
 				} else {
-					errors.state(request, isExpiredYear, "creditCard.expYear", "administrator.commercialBanner.error.past-year");
+					errors.state(request, isExpiredYear, "creditCard.expYear", "administrator.banner.error.past-year");
 				}
 			}
 		}

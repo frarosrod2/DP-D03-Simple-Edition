@@ -15,7 +15,7 @@ default.format.moment = yyyy/MM/dd HH:mm
 default.placeholder.moment = yyyy/mm/dd hh:mm
 default.placeholder.money = EUR 123,456.78
 default.placeholder.double = 123,456.78
-default.placeholder.integer = 123,456
+default.placeholder.integer = 5
 default.placeholder.url = http://www.acme.com
 
 default.placeholder.creditcard.holderName = Holder name

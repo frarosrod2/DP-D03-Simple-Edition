@@ -77,7 +77,7 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		}
 
 		if (!errors.hasErrors("rookieReward")) {
-			currencyOk = entity.getRookieReward().getCurrency().equals("EUR");
+			currencyOk = entity.getRookieReward().getCurrency().equals("EUR") || entity.getRookieReward().getCurrency().equals("€");
 			errors.state(request, currencyOk, "rookieReward", "administrator.challenge.error.currencyNotEUR");
 
 			amountOk = entity.getRookieReward().getAmount() > 0;
@@ -85,20 +85,42 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		}
 
 		if (!errors.hasErrors("averageReward")) {
-			currencyOk = entity.getAverageReward().getCurrency().equals("EUR");
+			currencyOk = entity.getAverageReward().getCurrency().equals("EUR") || entity.getAverageReward().getCurrency().equals("€");
 			errors.state(request, currencyOk, "averageReward", "administrator.challenge.error.currencyNotEUR");
 
 			amountOk = entity.getAverageReward().getAmount() > 0;
 			errors.state(request, amountOk, "averageReward", "administrator.challenge.error.amount");
 		}
 		if (!errors.hasErrors("expertReward")) {
-			currencyOk = entity.getExpertReward().getCurrency().equals("EUR");
+			currencyOk = entity.getExpertReward().getCurrency().equals("EUR") || entity.getExpertReward().getCurrency().equals("€");
 			errors.state(request, currencyOk, "expertReward", "administrator.challenge.error.currencyNotEUR");
 
 			amountOk = entity.getExpertReward().getAmount() > 0;
 			errors.state(request, amountOk, "expertReward", "administrator.challenge.error.amount");
 		}
 
+		if (!errors.hasErrors("rookieGoal")) {
+			currencyOk = entity.getRookieGoal().getCurrency().equals("EUR") || entity.getRookieGoal().getCurrency().equals("€");
+			errors.state(request, currencyOk, "rookieGoal", "administrator.challenge.error.currencyNotEUR");
+
+			amountOk = entity.getRookieGoal().getAmount() > 0;
+			errors.state(request, amountOk, "rookieGoal", "administrator.challenge.error.amount");
+		}
+
+		if (!errors.hasErrors("averageGoal")) {
+			currencyOk = entity.getAverageGoal().getCurrency().equals("EUR") || entity.getAverageGoal().getCurrency().equals("€");
+			errors.state(request, currencyOk, "averageGoal", "administrator.challenge.error.currencyNotEUR");
+
+			amountOk = entity.getAverageGoal().getAmount() > 0;
+			errors.state(request, amountOk, "averageGoal", "administrator.challenge.error.amount");
+		}
+		if (!errors.hasErrors("expertGoal")) {
+			currencyOk = entity.getExpertGoal().getCurrency().equals("EUR") || entity.getExpertGoal().getCurrency().equals("€");
+			errors.state(request, currencyOk, "expertGoal", "administrator.challenge.error.currencyNotEUR");
+
+			amountOk = entity.getExpertGoal().getAmount() > 0;
+			errors.state(request, amountOk, "expertGoal", "administrator.challenge.error.amount");
+		}
 	}
 
 	@Override

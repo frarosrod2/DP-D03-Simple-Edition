@@ -11,7 +11,7 @@
 	<acme:form-url code="administrator.technologyRecord.form.label.website" path="website"/>
 	<acme:form-textbox code="administrator.technologyRecord.form.label.email" path="email"/>
 	<acme:form-checkbox code="administrator.technologyRecord.form.label.openSource" path="openSource"/>
-	<acme:form-double code="administrator.technologyRecord.form.label.stars" path="stars"/>
+	<acme:form-integer code="administrator.technologyRecord.form.label.stars" path="stars"/>
 	
 	<acme:form-submit test="${command == 'show'}" 
 	code="administrator.technologyRecord.form.button.update"

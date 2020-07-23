@@ -11,7 +11,7 @@
 	<acme:form-textbox code="authenticated.technologyRecord.form.label.website" path="website"/>
 	<acme:form-textbox code="authenticated.technologyRecord.form.label.email" path="email"/>
 	<acme:form-textbox code="authenticated.technologyRecord.form.label.openSource" path="openSource"/>
-	<acme:form-textbox code="authenticated.technologyRecord.form.label.stars" path="stars"/>
+	<acme:form-integer code="authenticated.technologyRecord.form.label.stars" path="stars"/>
 	
 	<acme:form-return code="authenticated.technologyRecord.form.button.return" />	
 </acme:form> 
