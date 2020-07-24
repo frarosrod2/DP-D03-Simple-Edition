@@ -24,6 +24,7 @@ public class Banner extends DomainEntity {
 	//Serialisation identifier ----------------
 
 	@NotBlank
+	@URL
 	private String				picture;
 
 	@NotBlank
