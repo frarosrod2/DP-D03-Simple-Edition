@@ -20,4 +20,4 @@ administrator.challenge.form.button.return = Return
 
 administrator.challenge.error.currencyNotEUR = Currency not valid
 administrator.challenge.error.amount = Amount must be positive
-administrator.challenge.error.deadlineFuture = Date must be in future
+administrator.challenge.error.deadlineFuture = Date must be one month in future

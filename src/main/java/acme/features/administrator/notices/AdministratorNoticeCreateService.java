@@ -1,9 +1,7 @@
 
 package acme.features.administrator.notices;
 
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -65,16 +63,6 @@ public class AdministratorNoticeCreateService implements AbstractCreateService<A
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-
-		Calendar calendar;
-		Date minimumDeadline;
-
-		if (!errors.hasErrors("deadline")) {
-			calendar = new GregorianCalendar();
-			calendar.add(Calendar.DAY_OF_MONTH, 7);
-			minimumDeadline = calendar.getTime();
-			errors.state(request, entity.getDeadline().after(minimumDeadline), "deadline", "administrator.notice.error.deadlineFuture");
-		}
 
 		// Validacion Checkbox
 

@@ -5,7 +5,7 @@
 
 <acme:form>
 	<acme:form-textbox code="authenticated.challenge.form.label.title" path="title"/>
-	<acme:form-textbox code="authenticated.challenge.form.label.deadline" path="deadline"/>
+	<acme:form-moment code="authenticated.challenge.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="authenticated.challenge.form.label.description" path="description"/>
 	<acme:form-textbox code="authenticated.challenge.form.label.rookieGoal" path="rookieGoal"/>
 	<acme:form-textbox code="authenticated.challenge.form.label.rookieReward" path="rookieReward"/>

@@ -19,8 +19,7 @@
 	<acme:form-textbox code="administrator.banner.form.label.picture" path="picture"/>
 	<acme:form-textbox code="administrator.banner.form.label.slogan" path="slogan"/>
 	<acme:form-url code="administrator.banner.form.label.targetURL" path="targetURL"/>
-	<acme:form-creditcard code="administrator.banner.form.legend.creditCard" path="creditCard"/>	
-		
+
 	<!-- Botones -->
 	<acme:form-submit test="${command == 'show'}" code="administrator.banner.form.button.update"
 		action="/administrator/banner/update"/>
@@ -32,5 +31,14 @@
 		action="/administrator/banner/update"/>
 	<acme:form-submit test="${command == 'delete'}" code="administrator.banner.form.button.delete"
 		action="/administrator/banner/delete"/>
+		
+	<jstl:if test="${command != 'create' and not hasCard}">
+		<acme:form-submit method="get" code="administrator.banner.form.button.creditCard.create" action="/administrator/credit-card/create?bannerId=${bannerId}"/>	
+	</jstl:if>
+	<jstl:if test="${command != 'create' and hasCard}">
+		<acme:form-submit method="get" code="administrator.banner.form.button.creditCard.update" action="/administrator/credit-card/update?creditCard=${creditCard}"/>
+		<acme:form-submit method="get" code="administrator.banner.form.button.creditCard.show" action="/administrator/credit-card/show?creditCard=${creditCard}"/>		
+	</jstl:if>	
+		
   	<acme:form-return code="administrator.banner.form.button.return"/>
 </acme:form>

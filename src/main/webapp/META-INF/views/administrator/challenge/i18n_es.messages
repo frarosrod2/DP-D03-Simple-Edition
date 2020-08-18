@@ -20,4 +20,4 @@ administrator.challenge.form.button.return = Volver
 
 administrator.challenge.error.currencyNotEUR = Moneda no válida
 administrator.challenge.error.amount = La cantidad debe ser positiva
-administrator.challenge.error.deadlineFuture = La fecha debe estar en futuro
+administrator.challenge.error.deadlineFuture = La fecha debe estar un mes en futuro

@@ -5,7 +5,7 @@
 
 <acme:form>
 	<acme:form-textbox code="administrator.overture.form.label.title" path="title"/>
-	<acme:form-textbox code="administrator.overture.form.label.deadline" path="deadline"/>
+	<acme:form-moment code="administrator.overture.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="administrator.overture.form.label.description" path="description"/>
 	<acme:form-textbox code="administrator.overture.form.label.minMoney" path="minMoney"/>
 	<acme:form-textbox code="administrator.overture.form.label.maxMoney" path="maxMoney"/>

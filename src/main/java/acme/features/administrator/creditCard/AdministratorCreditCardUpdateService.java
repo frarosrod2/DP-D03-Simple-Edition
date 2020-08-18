@@ -1,5 +1,5 @@
 
-package acme.features.administrator.banner;
+package acme.features.administrator.creditCard;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -8,7 +8,7 @@ import java.util.GregorianCalendar;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.banners.Banner;
+import acme.entities.creditCards.CreditCard;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -16,55 +16,56 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AdministratorBannerUpdateService implements AbstractUpdateService<Administrator, Banner> {
+public class AdministratorCreditCardUpdateService implements AbstractUpdateService<Administrator, CreditCard> {
 
 	@Autowired
-	AdministratorBannerRepository repository;
+	AdministratorCreditCardRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Banner> request) {
+	public boolean authorise(final Request<CreditCard> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void bind(final Request<Banner> request, final Banner entity, final Errors errors) {
+	public void bind(final Request<CreditCard> request, final CreditCard entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors);
+		request.bind(entity, errors, "banner");
 	}
 
 	@Override
-	public void unbind(final Request<Banner> request, final Banner entity, final Model model) {
+	public void unbind(final Request<CreditCard> request, final CreditCard entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		int bannerId = (int) model.getAttribute("bannerId");
-		model.setAttribute("bannerId", bannerId);
+		request.unbind(entity, model, "holderName", "number", "brand", "expMonth", "cvv", "expYear");
 
-		request.unbind(entity, model, "picture", "slogan", "targetURL");
+		int cardId = request.getModel().getInteger("creditCard");
+
+		model.setAttribute("creditCard", cardId);
 	}
 
 	@Override
-	public Banner findOne(final Request<Banner> request) {
+	public CreditCard findOne(final Request<CreditCard> request) {
 		assert request != null;
 
-		Banner result;
+		CreditCard result;
 		int id;
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
+		id = request.getModel().getInteger("creditCard");
+		result = this.repository.findOneCCById(id);
 
 		return result;
 	}
 
 	@Override
-	public void validate(final Request<Banner> request, final Banner entity, final Errors errors) {
+	public void validate(final Request<CreditCard> request, final CreditCard entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -76,31 +77,31 @@ public class AdministratorBannerUpdateService implements AbstractUpdateService<A
 		Date check;
 
 		// Check if year is in past
-		if (!errors.hasErrors("creditCard.expYear")) {
+		if (!errors.hasErrors("expYear")) {
 			calendar = new GregorianCalendar();
 			test = new GregorianCalendar();
 			present = calendar.getTime();
-			test.set(2000 + entity.getCreditCard().getExpYear(), entity.getCreditCard().getExpMonth(), 1);
+			test.set(2000 + entity.getExpYear(), entity.getExpMonth(), 1);
 			check = test.getTime();
 			boolean isExpiredYear = check.after(present);
 			// Check if year is current year
 			if (!isExpiredYear) {
-				calendar.set(Calendar.MONTH, entity.getCreditCard().getExpMonth());
+				calendar.set(Calendar.MONTH, entity.getExpMonth());
 				calendar.set(Calendar.DATE, 1);
 				Date testing = calendar.getTime();
 				if (testing.equals(check)) {
 					// Check if month is in past
-					if (!errors.hasErrors("creditCard.expMonth")) {
+					if (!errors.hasErrors("expMonth")) {
 						calendar = new GregorianCalendar();
 						test = new GregorianCalendar();
 						present = calendar.getTime();
-						test.set(2000 + entity.getCreditCard().getExpYear(), entity.getCreditCard().getExpMonth(), 1);
+						test.set(2000 + entity.getExpYear(), entity.getExpMonth(), 1);
 						check = test.getTime();
 						boolean isExpiredMonth = check.after(present);
-						errors.state(request, isExpiredMonth, "creditCard.expMonth", "administrator.banner.error.past-month");
+						errors.state(request, isExpiredMonth, "expMonth", "administrator.creditCard.error.past-month");
 					}
 				} else {
-					errors.state(request, isExpiredYear, "creditCard.expYear", "administrator.banner.error.past-year");
+					errors.state(request, isExpiredYear, "expYear", "administrator.creditCard.error.past-year");
 				}
 			}
 		}
@@ -108,7 +109,7 @@ public class AdministratorBannerUpdateService implements AbstractUpdateService<A
 	}
 
 	@Override
-	public void update(final Request<Banner> request, final Banner entity) {
+	public void update(final Request<CreditCard> request, final CreditCard entity) {
 		assert request != null;
 		assert entity != null;
 

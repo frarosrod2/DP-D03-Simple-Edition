@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.banners.Banner;
+import acme.entities.creditCards.CreditCard;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -40,7 +41,7 @@ public class AdministratorBannerDeleteService implements AbstractDeleteService<A
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "picture", "slogan", "targetURL", "creditCard");
+		request.unbind(entity, model, "picture", "slogan", "targetURL");
 	}
 
 	@Override
@@ -69,7 +70,12 @@ public class AdministratorBannerDeleteService implements AbstractDeleteService<A
 		assert request != null;
 		assert entity != null;
 
+		CreditCard cc = this.repository.findOneCCByBannerId(entity.getId());
+		if (cc != null) {
+			this.repository.delete(cc);
+		}
 		this.repository.delete(entity);
+
 	}
 
 }

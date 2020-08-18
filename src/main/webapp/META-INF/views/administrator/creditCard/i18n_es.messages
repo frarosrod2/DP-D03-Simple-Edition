@@ -1,0 +1,15 @@
+administrator.creditCard.label.holder = Nombre
+administrator.creditCard.label.number = Número
+administrator.creditCard.label.brand = Marca
+administrator.creditCard.label.cvv = CVV
+administrator.creditCard.label.expMonth = Mes expiración
+administrator.creditCard.label.expYear = Año expiración
+
+administrator.creditCard.button.return = Volver
+administrator.creditCard.button.update = Actualizar
+administrator.creditCard.button.delete = Eliminar
+administrator.creditCard.button.create = Crear
+
+
+administrator.creditCard.error.past-year = El año está en pasado
+administrator.creditCard.error.past-month = El mes está en pasado

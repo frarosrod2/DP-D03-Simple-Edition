@@ -7,6 +7,9 @@ administrator.banner.form.button.return = Volver
 administrator.banner.form.button.update = Actualizar
 administrator.banner.form.button.delete = Eliminar
 administrator.banner.form.button.create = Crear
+administrator.banner.form.button.creditCard.create = Crear tarjeta de crédito
+administrator.banner.form.button.creditCard.update = Actualizar tarjeta
+administrator.banner.form.button.creditCard.show = Mostrar tarjeta
 
 administrator.banner.list.label.picture = Imagen
 administrator.banner.list.label.slogan = Eslogan

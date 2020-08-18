@@ -1,23 +1,21 @@
 
-package acme.datatypes;
+package acme.entities.creditCards;
 
-import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.CreditCardNumber;
 import org.hibernate.validator.constraints.Range;
 
-import acme.framework.datatypes.DomainDatatype;
+import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
-@Embeddable
+@Entity
 @Getter
 @Setter
-@ToString
-public class CreditCard extends DomainDatatype {
+public class CreditCard extends DomainEntity {
 
 	//Serialisation identifier ----------------
 
@@ -49,4 +47,7 @@ public class CreditCard extends DomainDatatype {
 
 	//Relationships
 
+	//	@Valid
+	//	@OneToOne(optional = false)
+	//	private Banner				banner;
 }

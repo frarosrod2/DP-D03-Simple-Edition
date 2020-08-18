@@ -7,9 +7,9 @@
 	<acme:form-textbox code="administrator.notice.form.label.title" path="title"/>
 	<acme:form-textbox code="administrator.notice.form.label.picture" path="picture"/>
 	<c:if test="${ command == 'show' }">
-	<acme:form-textbox code="administrator.notice.form.label.creation" path="creation"/>
+	<acme:form-moment code="administrator.notice.form.label.creation" path="creation"/>
 	</c:if>
-	<acme:form-textbox code="administrator.notice.form.label.deadline" path="deadline"/>
+	<acme:form-moment code="administrator.notice.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="administrator.notice.form.label.body" path="body"/>
 	<c:if test="${ command == 'show' }">
 	<acme:form-panel code="administrator.notice.form.label.linkList">
